@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="range.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+</head>
+<body>
+  <section>
+    <header>
+      <h1>Simple, traffic-based pricing</h1>
+      <h2>Sign-up for our 30-day trial.<br> No credit card required. </h2>
+    </header>
+    <div class="card">
+      <div class="main">
+        <div class="pageviews"><span class="pageviews-span"></span> Pageviews</div>
+        <input class="slider" type="range" min="1" max ="5" value="3"  >
+        <div class="tarif"><strong class="tarif-strong">$</strong> /month</div>
+
+        <div class="choice">Monthly Billing 
+        <a><input class="btn-choice" type="range" min="0" max="1" value="0" ></button></a>
+         Yearly Billing <span class="reduction">-25%</span><span class="discount">discount</span></div>
+        
+      </div>
+      <footer>
+      <ul>
+        <li>Unlimited websites</li>
+        <li>100% data ownership</li>
+        <li>Email reports</li>
+      </ul>
+
+      <a href="#"> <button class="btn-start">Start my trial</button> </a>
+      </footer>
+    </div>
+  </section>
+  <script>
+    let slider = document.querySelector('.slider');
+    let page = document.querySelector('.pageviews-span');
+    let tarif = document.querySelector('.tarif-strong');
+    let btn = document.querySelector(".btn-choice")
+    let dolars = "$";
+    let price = "";
+
+    slider.oninput = change;
+    window.onload = change;
+    btn.oninput = change;
+
+    function change(){
+      if(btn.value ==='0'){
+        btn.style.setProperty('--webkitBgOn','hsl(223, 50%, 87%)');
+        btn.style.setProperty('--justForMoz', 'translateX(5px)');// for thumb just for Moz
+      }else{
+        btn.style.setProperty('--webkitBgOn','hsl(174, 86%, 60%)');
+        btn.style.setProperty('--justForMoz', 'translateX(-5px)'); // for thumb just for Moz
+
+      }
+
+      const percent = ((slider.value - slider.min) /(slider.max - slider.min)) * 100;
+      slider.style.setProperty("--webkitProgressPercent",percent+'%');
+      
+
+
+      switch(slider.value){
+        case '1':      
+          if(btn.value === '1'){
+          price = (8*0.75);
+          }else{
+          price = 8;
+          }
+          page.textContent = '10k';
+          tarif.textContent = dolars+ price;
+          break;
+        case '2':
+        if(btn.value === '1'){
+          price = (12*0.75);
+          }else{
+          price = 12;
+          }
+          page.textContent = '50k';
+          tarif.textContent = dolars+price;
+          break;
+        case '3':
+        if(btn.value === '1'){
+          price = (16*0.75);
+          }else{
+          price = 16;
+          }
+          page.textContent = '100k';
+          tarif.textContent = dolars+price;
+          break;
+        case '4': 
+        if(btn.value === '1'){
+          price = (24*0.75);
+          }else{
+          price = 24;
+          }
+          page.textContent = '500k';
+          tarif.textContent = dolars+price;
+          break;
+        case '5':
+        if(btn.value === '1'){
+          price = (36*0.75);
+          }else{
+          price = 36;
+          }
+          page.textContent = '1m';
+          tarif.textContent = dolars+price;
+          break;
+        default: 
+        window.alert('Oops not possible !');
+      }
+
+
+  }
+
+
+  </script>
+</body>
+</html>
