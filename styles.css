@@ -17,6 +17,7 @@ header{
     padding-top:50px;
     padding-bottom: 60px;
     margin-top: 50px;
+    margin-bottom: 20px;;
     background: url(images/pattern-circles.svg) center center / 165px no-repeat;
 }
 h1{
@@ -132,4 +133,78 @@ footer ul li::before{
 .btn-start:hover{
     color:white;
     font-weight: 600;
+}
+
+@media only screen and (min-width:550px){
+    body {
+        background-color: hsl(230, 100%, 99%);
+    }
+    .card{
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+    header {
+        margin-bottom: 50px;;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 br {
+        display: none;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: 50% 50% ;
+        grid-template-rows: 100px 75px 50px;
+        
+    }
+    .pageviews{
+        grid-column: 1;
+        grid-row: 1;
+        justify-self:start;
+        align-self: end;
+        padding-left: 50px;
+        padding-bottom: 20px;
+
+    }
+    .slider{
+        grid-column: 1 /span 2;
+        grid-row: 2;
+        justify-self: center;
+    }
+    .tarif{
+        grid-column: 2;
+        grid-row:1;
+        justify-self: center;
+        padding-bottom: 0;
+    }
+    .choice{
+        grid-column: 1 /span 2;
+        grid-row:3;
+        justify-self: end;
+        padding-right: 70px;
+    }
+    .discount{
+        display: inline-block;
+    }
+    .discount::before{
+        content:' ';
+        display: inline-block;
+        width:5px;
+    }
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 50px ;
+        margin-top: 30px;
+    }
+    footer ul {
+        margin-bottom: 0;
+    }
+    footer ul li {
+        text-align: left;
+    }
 }

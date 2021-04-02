@@ -29,7 +29,7 @@ input[type=range].slider {
     border-radius: 30px;
     cursor: pointer;
     -webkit-appearance: none;
-    
+    box-shadow: 0 15px 20px 10px rgba(16, 216, 196, .2) ;
   }
 
   input[type=range].slider:focus::-webkit-slider-runnable-track {
@@ -60,6 +60,8 @@ input[type=range].slider {
     background-image: url(images/icon-slider.svg) ;
     background-repeat: no-repeat;
     background-position: center;
+    box-shadow: 0 15px 20px 10px rgba(16, 216, 196, .2) ;
+
   }
   input[type=range].slider::-ms-track {
     background: transparent;
@@ -90,6 +92,7 @@ input[type=range].slider {
     border-radius: 50px;
     cursor: pointer;
     margin-top: 0px;
+    box-shadow: 0 20px 20px 10px rgba(16, 216, 196, .2) ;
     /*Needed to keep the Edge thumb centred*/
   }
   input[type=range].slider:focus::-ms-fill-lower {

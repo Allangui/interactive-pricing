@@ -13,7 +13,7 @@
 
 </head>
 <body>
-  <section>
+  
     <header>
       <h1>Simple, traffic-based pricing</h1>
       <h2>Sign-up for our 30-day trial.<br> No credit card required. </h2>
@@ -26,7 +26,7 @@
 
         <div class="choice">Monthly Billing 
         <input class="btn-choice" type="range" min="0" max="1" value="0" ></button>
-         Yearly Billing <span class="reduction">-25%</span><span class="discount">discount</span></div>
+         Yearly Billing <span class="reduction">-25%<span class="discount">discount</span></span></div>
         
       </div>
       <footer>
@@ -38,16 +38,16 @@
 
       <button class="btn-start">Start my trial</button>
       </footer>
-      <input type="range" >
     </div>
-  </section>
+  
   <script>
     let slider = document.querySelector('.slider');
     let page = document.querySelector('.pageviews-span');
     let tarif = document.querySelector('.tarif-strong');
     let btn = document.querySelector(".btn-choice")
     let dolars = "$";
-    let price = "";
+    let price = 0;
+    
 
     slider.oninput = change;
     window.onload = change;
@@ -75,6 +75,7 @@
           }else{
           price = 8;
           }
+          price = price.toFixed(2);
           page.textContent = '10k';
           tarif.textContent = dolars+ price;
           break;
@@ -84,6 +85,7 @@
           }else{
           price = 12;
           }
+          price = price.toFixed(2);
           page.textContent = '50k';
           tarif.textContent = dolars+price;
           break;
@@ -93,6 +95,7 @@
           }else{
           price = 16;
           }
+          price = price.toFixed(2);
           page.textContent = '100k';
           tarif.textContent = dolars+price;
           break;
@@ -102,6 +105,7 @@
           }else{
           price = 24;
           }
+          price = price.toFixed(2);
           page.textContent = '500k';
           tarif.textContent = dolars+price;
           break;
@@ -111,6 +115,7 @@
           }else{
           price = 36;
           }
+          price = price.toFixed(2);
           page.textContent = '1m';
           tarif.textContent = dolars+price;
           break;
@@ -120,6 +125,7 @@
 
 
   }
+
 
 
   </script>
