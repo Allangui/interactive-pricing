@@ -6,6 +6,7 @@ input[type=range].slider {
     --webkitProgressPercent : 0%;
   }
   input[type=range].slider:focus {
+    outline: none;
   }
   input[type=range].slider::-webkit-slider-runnable-track {
     background: linear-gradient(90deg,hsl(174, 77%, 80%) var(--webkitProgressPercent), hsl(224, 65%, 95%) var(--webkitProgressPercent));
@@ -15,7 +16,6 @@ input[type=range].slider {
     height: 8.4px;
     cursor: pointer;
     border-radius: 30px;
-    
   }
   input[type=range].slider::-webkit-slider-thumb {
     margin-top: -16px;
@@ -33,7 +33,7 @@ input[type=range].slider {
   }
 
   input[type=range].slider:focus::-webkit-slider-runnable-track {
-    
+    outline: none;
   }
   input[type=range].slider::-moz-range-track {
     background: hsl(220, 38%, 94%);
@@ -125,6 +125,7 @@ input[type=range].slider {
     -moz-appearance: none;
   }
   input[type=range].btn-choice:focus {
+    outline: none;
   }
   input[type=range].btn-choice::-webkit-slider-runnable-track {
     background: var(--webkitBgOn);

@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
 }
-
 li{
     list-style: none;
 }
@@ -99,6 +98,9 @@ footer{
     padding-top:20px;
     padding-bottom: 30px;
 }
+footer ul {
+    margin-bottom: 20px;
+}
 footer ul li {
     margin: 10px auto;
     text-align: center;
@@ -121,14 +123,11 @@ footer ul li::before{
     letter-spacing: 1px;
     color:hsl(226, 100%, 87%);
     background-color: hsl(227, 35%, 25%);
+    outline: none;
     border: 0 solid transparent;
-    margin-top:20px;
     cursor: pointer;
     width:200px;
     height:50px;
-}
-.btn-start:focus{
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .btn-start:hover{
     color:white;
